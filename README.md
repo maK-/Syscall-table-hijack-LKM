@@ -18,11 +18,13 @@ OUTPUT
 ==========
 insmod maK_it.ko
 Message from syslogd@localhost at Nov 25 17:36:13 ...
- kernel:Syscall Table old address: c08532b0
+ kernel:Syscall Table Address: c08532b0
 
 Message from syslogd@localhost at Nov 25 17:36:13 ...
- kernel:Syscall Table new address: f7e87000
+ kernel:Syscall Table old write address: c0537520
 
+Message from syslogd@localhost at Nov 25 17:36:13 ...
+ kernel:Syscall Table new write address: f7e58000
 
 rmmod maK_it
 Message from syslogd@localhost at Nov 25 17:37:49 ...
