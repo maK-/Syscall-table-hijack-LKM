@@ -29,14 +29,15 @@ asmlinkage int new_write(unsigned int fd, const char __user *buf, size_t count){
 }
 
 static int init_mod(void){
-	printk(KERN_EMERG "Syscall Table old address: %x\n", SYSCALL_TABLE);
+	printk(KERN_EMERG "Syscall Table Address: %x\n", SYSCALL_TABLE);
 	
 	//Changing control bit to allow write	
 	write_cr0 (read_cr0 () & (~ 0x10000));
 
 	original_write = (void *)sys_call_table[__NR_write];
 	sys_call_table[__NR_write] = new_write;
-	printk(KERN_EMERG "Syscall Table new address: %x\n", new_write);
+    printk(KERN_EMERG "Write system call old address: %x\n", original_write);
+	printk(KERN_EMERG "Write system call new address: %x\n", new_write);
 	//Changing control bit back
 	write_cr0 (read_cr0 () | 0x10000);
 	return 0;
