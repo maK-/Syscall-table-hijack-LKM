@@ -14,3 +14,18 @@ rmmod maK_it
 
 Building towards development of a rootkit...
 
+OUTPUT
+==========
+insmod maK_it.ko
+Message from syslogd@localhost at Nov 25 17:36:13 ...
+ kernel:Syscall Table old address: c08532b0
+
+Message from syslogd@localhost at Nov 25 17:36:13 ...
+ kernel:Syscall Table new address: f7e87000
+
+
+rmmod maK_it
+Message from syslogd@localhost at Nov 25 17:37:49 ...
+ kernel:Module exited cleanly
+
+Techniques from here http://memset.wordpress.com/2010/12/03/syscall-hijacking-kernel-2-6-systems/
