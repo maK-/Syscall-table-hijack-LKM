@@ -13,6 +13,7 @@ Remove with
 rmmod maK_it
 
 Building towards development of a rootkit...
+You can read more at the blog post here http://r00tkit.me/?p=46
 
 OUTPUT
 ==========
